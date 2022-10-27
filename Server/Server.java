@@ -22,7 +22,7 @@ public class Server {
                 PrintWriter writer = new PrintWriter(
                         socket.getOutputStream());
 
-                Inf inf = new Inf(writer, wwwDirectory);
+                Inf inf = new Inf(writer, www);
 
                 while (!reader.ready()) ;
 
