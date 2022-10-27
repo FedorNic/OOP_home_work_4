@@ -10,7 +10,7 @@ public class Server {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(8080);
-            String wwwDirectory = new File(".\\www\\").getAbsolutePath();
+            String www = new File(".\\www\\").getAbsolutePath();
 
             for(;;) {
                 Socket socket = serverSocket.accept();
@@ -29,7 +29,7 @@ public class Server {
                 while (reader.ready()) {
                     String[] request = reader.readLine().split(" ");
                     if (request[0].trim().equals("GET")) {
-                        inf.getContext(request[1].trim());
+                        inf.getTotal(request[1].trim());
                     }
                 }
                 socket.close();
