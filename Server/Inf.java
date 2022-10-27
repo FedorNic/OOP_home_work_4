@@ -12,7 +12,7 @@ public class Inf {
         this.www = www;
     }
 
-    public void getContext(String serv) {
+    public void getTotal(String serv) {
         serv = this.www + serv;
         try {
             File file = new File(new File(serv).getAbsolutePath());
